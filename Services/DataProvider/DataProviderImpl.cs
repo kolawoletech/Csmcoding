@@ -1,8 +1,6 @@
 using System;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
-
 using Newtonsoft.Json;
 using sm_coding_challenge.Models;
 
@@ -12,7 +10,7 @@ namespace sm_coding_challenge.Services.DataProvider
     {
         public static TimeSpan Timeout = TimeSpan.FromSeconds(30);
 
-        async Task<PlayerModel> IDataProvider.GetPlayerById(string id)
+        public PlayerModel GetPlayerById(string id)
         {
             var handler = new HttpClientHandler()
             {
