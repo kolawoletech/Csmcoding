@@ -41,11 +41,19 @@ namespace sm_coding_challenge.Controllers
             return Json(returnList);
         }
 
+       
+
+
         [HttpGet]
-        public IActionResult LatestPlayers(string ids)
+        public async Task<IActionResult> LatestPlayersAsync(string ids)
         {
-            throw new NotImplementedException("Method Needs to be Implemented");
-        }
+            var idList = ids.Split(',');
+            var returnList = new List<LatestPlayerModel>();
+            foreach (var id in idList)
+            {
+                returnList.Add(await _dataProvider.GetLatestPlayers(ids));
+            }
+            return Json(returnList);        }
 
         public IActionResult Error()
         {

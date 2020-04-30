@@ -14,5 +14,6 @@ namespace sm_coding_challenge.Models
         [DataMember(Name = "position")]
         public string Position { get; set; }
     }
+
 }
 
