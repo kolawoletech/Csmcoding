@@ -24,19 +24,19 @@ namespace sm_coding_challenge.Controllers
         }
 
         [HttpGet]
-        public IActionResult Player(string id)
+        public async Task<IActionResult> PlayerAsync(string id)
         {
-            return Json(_dataProvider.GetPlayerById(id));
+            return Json(await _dataProvider.GetPlayerById(id));
         }
 
         [HttpGet]
-        public IActionResult Players(string ids)
+        public async Task<IActionResult> PlayersAsync(string ids)
         {
             var idList = ids.Split(',');
             var returnList = new List<PlayerModel>();
             foreach (var id in idList)
             {
-                returnList.Add(_dataProvider.GetPlayerById(id));
+                returnList.Add(await _dataProvider.GetPlayerById(id));
             }
             return Json(returnList);
         }
