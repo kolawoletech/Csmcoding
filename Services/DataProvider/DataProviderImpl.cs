@@ -73,7 +73,7 @@ namespace sm_coding_challenge.Services.DataProvider
                 {
                     if(player.Id.Equals(id))
                     {
-                        //return player;
+                        
                         return player;
                     }
                 }

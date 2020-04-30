@@ -9,14 +9,13 @@ namespace sm_coding_challenge.Models
         public string Id { get; set; }
 
         [DataMember(Name = "entry_id")]
-        public string Eid { get; set; }
+        public string Entry_Id { get; set; }
 
         [DataMember(Name = "name")]
         public string Name { get; set; }
 
         [DataMember(Name = "position")]
         public string Position { get; set; }
-
 
         [DataMember(Name = "yds")]
         public string Yards { get; set; }
@@ -29,7 +28,7 @@ namespace sm_coding_challenge.Models
         public string Touchdowns { get; set; }
 
         [DataMember(Name = "fum")]
-        public string Fumbles { get; set; }
+        public string Fumble { get; set; }
     }
 
 
