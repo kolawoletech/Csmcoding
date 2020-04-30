@@ -8,11 +8,14 @@ namespace sm_coding_challenge.Models
         [DataMember(Name = "player_id")]
         public string Id { get; set; }
 
-        [DataMember(Name = "entry_id")]
+        [DataMember(Name = "entry_Id")]
         public string Entry_Id { get; set; }
 
         [DataMember(Name = "name")]
         public string Name { get; set; }
+
+        [DataMember(Name = "recs")]
+        public string Records { get; set; }
 
         [DataMember(Name = "position")]
         public string Position { get; set; }
