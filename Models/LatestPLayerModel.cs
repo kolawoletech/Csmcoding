@@ -25,7 +25,7 @@ namespace sm_coding_challenge.Models
         [DataMember(Name = "att")]
         public string Attribute { get; set; }
 
-        [DataMember(Name = "tsd")]
+        [DataMember(Name = "tds")]
         public string Touchdowns { get; set; }
 
         [DataMember(Name = "fum")]
